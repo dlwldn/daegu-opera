@@ -7,6 +7,10 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+body {
+    background: url(../images/bg_body.gif) repeat 0 0;
+}
+
 .wrap {
     width: 100%;
 }
@@ -154,7 +158,7 @@
     left: 0;
     width: 4.5%;
     height: 100vh;
-    background-color: #fff;
+    background: url(../images/bg_body.gif) repeat 0 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -227,56 +231,6 @@
     cursor: pointer;
 }
 
-/* .opera {
-    display: none;
-}
-.opera-come {
-    width: 700px;
-    height: 600px;
-    background-color:rgb(62, 80, 121);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 100px;
-    right: 0;
-    z-index: 1000;
-}
-.opera-come > h1 {
-    margin-bottom: 150px;
-    color:white;
-}
-.opera-come > h1 > span {
-    font-size: 1.5em;
-}
-.opera-come-list-line {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 60px;
-} 
-.opera-come-list {
-    width: 100%;
-}
-.opera-come-list > div > li > a{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.opera-come-list > div > li > a {
-    color:white;
-}
-.opera-come-list > div > li > a > span {
-    margin-top: 10px;
-}
-.opera-icon {
-    font-size: 3em;
-}
-.fa-times:hover {
-    cursor: pointer;
-} */
-
 .opera-map {
     width: 95%;
     margin-top: 3em;
@@ -287,9 +241,10 @@
 }
 
 .opera-map>div>img {
+    display: block;
     position: relative;
     top: 0;
-    left: -8%;
+    left: -8%; 
 }
 
 .opera-map>div>div {
@@ -389,7 +344,7 @@
     margin: 0 5%;
     padding: 3em 0;
     color:  #444;
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 
 #footer>div {
@@ -397,14 +352,6 @@
     justify-content: space-between;
     align-items: flex-start;
 }
-
-/* #footer>div>ul {
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-} */
 
 #footer>div>ul>li {
     margin-bottom: 1em;
@@ -520,6 +467,10 @@
 }
 
 @media screen and (max-width: 840px) {
+    html {
+        font-size: 14px;
+    }
+
     #header {
         width: 100%;
     }
@@ -535,6 +486,14 @@
         width: 100%;
     }
 
+    .slide-wrap {
+        width: 100%;
+    }
+
+    .opera-map {
+        width: 100%;
+    }
+
     .main-logo a img {
         width: 100%;
     }
@@ -545,5 +504,35 @@
 
     .bottom-navbar {
         height: auto;
+    }
+
+    #footer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .opera-location {
+        text-align: center;
+    }
+
+    .opera-location>ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .opera-location>ul>li {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    .annex-intro {
+        display: none;
+    }
+
+    #footer > div > ul:nth-child(2) {
+        display: none;
     }
 }

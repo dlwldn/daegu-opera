@@ -39,20 +39,10 @@ $(".slide").animate({
 function replace() {
     const li = $(".slide > li:eq(0)");
     li.remove();
-    $(".slide").css("margin-left","0px");
+    $(".slide").css("margin-left","20px");
     $(".slide").append(li);
 }
 
 let slide = setInterval(function() {
     moveSlide();
 }, 2000);
-
-// $(".slide li").mouseover(function(){
-//     clearInterval(slide);
-//     $(this).css("border" ,"1px solid red");
-// }).mouseleave(function(){
-//     $(this).css("border" ,"none");
-//     slide = setInterval(function() {
-//     moveSlide();
-//     },1000);
-// });      
